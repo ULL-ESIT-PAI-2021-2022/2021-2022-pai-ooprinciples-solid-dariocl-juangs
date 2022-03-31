@@ -55,6 +55,8 @@ class MyClass extends ParentClass {
 function main() {
   const instance = new MyClass;
   instance.method();
+  // Ommited y_ variable because it's suposed to be protected
+  // hence, not accesible directly from external code
   console.log(instance.x, instance.z, instance.getPrivateZ());
 }
 

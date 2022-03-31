@@ -20,7 +20,6 @@ class ParentClass {
 
 class MyClass extends ParentClass{
   #z = 3;
-  
   constructor() {
     super(); // always call it first!
     this.x = 1; 
