@@ -1,0 +1,23 @@
+{
+  "name": "2021-2022-pai-ooprinciples-solid-dariocl-juangs",
+  "version": "1.0.0",
+  "description": "Auxilary examples for learning proper OOP in JavaScript",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ULL-ESIT-PAI-2021-2022/2021-2022-pai-ooprinciples-solid-dariocl-juangs.git"
+  },
+  "keywords": [
+    "OOP",
+    "JavaScript",
+    "SOLID"
+  ],
+  "author": "Dario Cerviño Luridiana, Juan García Santos",
+  "bugs": {
+    "url": "https://github.com/ULL-ESIT-PAI-2021-2022/2021-2022-pai-ooprinciples-solid-dariocl-juangs/issues"
+  },
+  "homepage": "https://github.com/ULL-ESIT-PAI-2021-2022/2021-2022-pai-ooprinciples-solid-dariocl-juangs#readme",
+  "devDependencies": {
+    "eslint": "^8.12.0",
+    "eslint-config-google": "^0.14.0"
+  }
+}
