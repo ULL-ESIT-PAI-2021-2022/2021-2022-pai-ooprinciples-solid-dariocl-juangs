@@ -13,6 +13,7 @@
 
 class Wheels {
   constructor(tires) {
+    /** @public {Array} */
     this.tires = tires;
   }
 }
@@ -22,10 +23,6 @@ class Car {
     this.model = model;
     this.km = km;
     this.wheels = new Wheels(tires);
-  }
-
-  run () {
-    console.log('running');
   }
 
   getInfo() {

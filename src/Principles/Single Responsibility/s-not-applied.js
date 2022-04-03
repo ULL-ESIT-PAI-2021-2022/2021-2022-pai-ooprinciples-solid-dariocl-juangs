@@ -8,7 +8,8 @@
  * @author Juan García Santos
  * @since Mar 30 2022
  * @desc example code that does not apply single responsablity principle
- *
+ * @see {@link https://medium.com/@hayreddintuzel/solid-principles-with-examples-12f36f61796c}
+ * 
  */
 
 class Car {

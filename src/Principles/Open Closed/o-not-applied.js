@@ -11,28 +11,25 @@
  *
  */
 
-// In another INACCESIBLE file
-class Car {
-  constructor(model, km) {
-    this.model = model;
-    this.km = km;
-  }
+// PROBLEM: We need kiwis to be in the fruit basket
 
-  run () {
-    console.log('running');
+class FruitBasket {
+  // SOLUTION 1: We add kiwi in the definition of the class
+  #fruits =  ['pineapple', 'apple', 'kiwi'];
+  takeFruit(flavor) {
+    if (this.#fruits.indexOf(flavor) > -1) {
+      console.log('Great success. Now you have a fruit.');
+    } else {
+      console.log('Epic fail. No fruit for you.');
+    }
   }
-}
+};
 
 // Main program File
 // Main Program requires Cars to be able to stop
 const main = () => {
-  // Touching the prototype already tells us something is wrong
-  Car.prototype.stop = () => {
-    console.log('stopped');
-  };
-  const newCar = new Car();
-  newCar.run();
-  newCar.stop();
+  const fruitsBasket = new FruitBasket();
+  fruitsBasket.takeFruit('kiwi');
 };
 
 if (require.main === module) main();

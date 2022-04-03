@@ -6,8 +6,8 @@
  *
  * @author Dario Cerviño Luridiana
  * @author Juan García Santos
- * @since Mar 30 2022
- * @desc example code that aplies open-closed principle
+ * @since Apr 03 2022
+ * @desc Context for code showing the open-closed principle
  *
  */
 
@@ -22,18 +22,10 @@ class FruitBasket {
       console.log('Epic fail. No fruit for you.');
     }
   }
-
-  // SOLUTION 2: We create a method to add a fruit to the basket
-  addFruit(fruit) {
-    this.#fruits.push(fruit);
-  }
 };
 
-// Main program File
-// Main Program requires Cars to be able to stop
 const main = () => {
   const fruitsBasket = new FruitBasket();
-  fruitsBasket.addFruit('kiwi');
   fruitsBasket.takeFruit('kiwi');
 };
 

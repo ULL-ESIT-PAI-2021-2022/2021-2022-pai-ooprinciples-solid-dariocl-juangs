@@ -38,4 +38,4 @@ class Truck extends Car {
 const car = new Car('BMW', 0);
 const truck = new Truck('BMW', 0);
 
-console.log(typeof car.run() === typeof truck.run());
+console.log(typeof car.run() === typeof truck.run()); // true

@@ -12,40 +12,54 @@
  */
 'use strict';
 
-/** */
+/** Parent class example */
 class ParentClass {
-  /** @constructor */
+  /**
+   * Sample constructor for parent class 
+   * @constructor */
   constructor() {
-    this.y_ = 2;
+    /** 
+     * Protected Field example
+     * @protected
+     */
+    this.protectedField_ = 2;
   }
 }
 
-/** */
+/** Child class example */
 class MyClass extends ParentClass {
-  /** @private */
-  #z = 3;
-
-  /** @constructor */
-  constructor() {
-    super(); // always call it first!
-    this.x = 1;
-    this.z = 'something else';
-  }
-
   /**
-   * Getter for a private z
-   * @return { * } Z
+   * Private field example 
+   * @private
    */
-  getPrivateZ() {
-    return this.#z;
+  #privateField = 3;
+
+  /** 
+   * Sample constructor for child class
+   * @constructor */
+  constructor() {
+    super();         
+    /** 
+     * Public field example
+     * @public
+     */
+    this.publicField = 1;
+    this.#privateField = 'something else';
   }
 
   /**
-   * changes value of public attribute z
-   * does not generate any conflict whatsoever witzh private z
+   * Getter for a private attribute
+   * @return { * } privateField
+   */
+  getPrivateField() {
+    return this.#privateField;
+  }
+
+  /**
+   * Changes value of private atribute
    */
   method() {
-    this.z = 'Im One of a kind!';
+    this.#privateField = 'Im Private';
   }
 }
 
@@ -55,9 +69,9 @@ class MyClass extends ParentClass {
 function main() {
   const instance = new MyClass;
   instance.method();
-  // Ommited y_ variable because it's suposed to be protected
+  // Ommited protectedField_ variable because it's SUPPOSED to be protected
   // hence, not accesible directly from external code
-  console.log(instance.x, instance.z, instance.getPrivateZ());
+  console.log(instance.x, instance.getPrivateField());
 }
 
 if (require.main === module) main();

@@ -16,7 +16,7 @@ class Wheels {
     this.tires = tires;
   }
   getTires() {
-    return this.tires.join('; ')
+    return this.tires.join('; ');
   }
 }
 
@@ -25,10 +25,6 @@ class Car {
     this.model = model;
     this.km = km;
     this.wheels = new Wheels(tires);
-  }
-
-  run () {
-    console.log('running');
   }
 
   getInfo() {
